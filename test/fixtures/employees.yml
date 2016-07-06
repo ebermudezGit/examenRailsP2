@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: Lalo
+  email: lolo@gmail.com
+
+two:
+  nombre: Lola
+  email: lola@aass.com
