@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-
+group :development, :test do
+    gem 'railroady'
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
