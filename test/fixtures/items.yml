@@ -2,12 +2,8 @@
 
 one:
   item: MyString
-  serie: 133565
-  descripcion: MyString
-  tamanio: 1
+  serie: MyString
 
 two:
-  item: ddda
+  item: MyString
   serie: MyString
-  descripcion: MyString
-  tamanio: 10

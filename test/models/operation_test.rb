@@ -9,4 +9,14 @@ class OperationTest < ActiveSupport::TestCase
     print assert_not operations(:two).save
 
   end
+
+  test "Item exists" do
+
+    operations(:two).inventario_id = nil
+
+    print "validation references Item exists "
+    print assert_not operations(:two).save
+
+  end
+
 end

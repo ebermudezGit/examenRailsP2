@@ -1,5 +1,6 @@
 class Operation < ActiveRecord::Base
 	belongs_to :employee
-	validates :descripcion,:employee_id, presence: true
+	belongs_to :inventario
+	validates :descripcion,:employee_id,:inventario_id, presence: true
 
 end

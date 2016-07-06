@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706014041) do
+ActiveRecord::Schema.define(version: 20160706024943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,14 +34,24 @@ ActiveRecord::Schema.define(version: 20160706014041) do
 
   add_index "inventarios", ["serie"], name: "index_inventarios_on_serie", unique: true, using: :btree
 
+  create_table "items", force: :cascade do |t|
+    t.string   "item"
+    t.string   "serie"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "operations", force: :cascade do |t|
-    t.string   "descripcion", null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "descripcion",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "employee_id"
+    t.integer  "inventario_id"
   end
 
   add_index "operations", ["employee_id"], name: "index_operations_on_employee_id", using: :btree
+  add_index "operations", ["inventario_id"], name: "index_operations_on_inventario_id", using: :btree
 
   add_foreign_key "operations", "employees"
+  add_foreign_key "operations", "inventarios"
 end
