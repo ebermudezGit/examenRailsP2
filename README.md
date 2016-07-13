@@ -42,3 +42,4 @@ Una empresa dedicada al cambio de neumáticos necesita un sistema de gestión y 
 * Establecer la relación belongs_to y has_one. (se debe tener cuidado de que lado ponerlas)
 * Realizar un test que nos asegure que de una operación podamos obtener el item de inventario utilizada.
 * Realizar un test que nos asegure que de una pieza de inventario podamos obtener la operación respectiva (si es que existe)
+
